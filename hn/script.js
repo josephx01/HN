@@ -1,15 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-        const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-
-    hamburger.addEventListener('click', function() {
-        // Hamburger ikonasını dəyişdirmək
-        this.classList.toggle('active');
-        
-        // Menyunun görünürlüyünü dəyişdirmək
-        navMenu.classList.toggle('active');
-    });
-    
     const translations = {
         az: {
             "home": "Ana Səhifə",
@@ -236,53 +225,52 @@ document.addEventListener('DOMContentLoaded', function() {
             "rights-reserved": "Tüm hakları saklıdır."
     }
 };
-function changeLanguage(lang) {
-    console.log("Changing to language: " + lang);
-    
-    // Update elements
-    document.querySelectorAll('[data-key]').forEach(element => {
-        const key = element.getAttribute('data-key');
-        if (translations[lang] && translations[lang][key]) {
-            element.textContent = translations[lang][key];
-        }
+    function changeLanguage(lang) {
+        console.log("Changing to language: " + lang);
+        
+        // Update elements
+        document.querySelectorAll('[data-key]').forEach(element => {
+            const key = element.getAttribute('data-key');
+            if (translations[lang] && translations[lang][key]) {
+                element.textContent = translations[lang][key];
+            }
     });
     
     // Update active button
-    document.querySelectorAll('.language-selector button').forEach(btn => {
-        if (btn.getAttribute('data-lang') === lang) {
-            btn.classList.add('active');
-        } else {
-            btn.classList.remove('active');
-        }
+        document.querySelectorAll('.language-selector button').forEach(btn => {
+            if (btn.getAttribute('data-lang') === lang) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
     });
+}
 
-
-    // Add click events to buttons
+// Add click events to buttons
     document.querySelectorAll('.language-selector button').forEach(button => {
         button.addEventListener('click', function() {
             const lang = this.getAttribute('data-lang');
             changeLanguage(lang);
         });
-    });
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-menu');
-    
-        hamburger.addEventListener('click', function() {
-            // Hamburger ikonasını dəyişdirmək
-            this.classList.toggle('active');
-            
-            // Menyunun görünürlüyünü dəyişdirmək
-            navMenu.classList.toggle('active');
-        });
+});
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hamburger.addEventListener('click', function() {
+        // Hamburger ikonasını dəyişdirmək
+        this.classList.toggle('active');
         
-        // Menyu linkləri üçün hadisə dinləyicisi
-        const navLinks = document.querySelectorAll('.nav-menu li a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                // Menyunu bağlamaq
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-            });
+        // Menyunun görünürlüyünü dəyişdirmək
+        navMenu.classList.toggle('active');
+    });
+    
+    // Menyu linkləri üçün hadisə dinləyicisi
+    const navLinks = document.querySelectorAll('.nav-menu li a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            // Menyunu bağlamaq
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
         });
     });
-}
+});
