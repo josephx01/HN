@@ -5,29 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Nova - Təmir və Təmizlik Xidmətləri</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Header Bölməsi -->
-    <header id="header">
+    <!-- Header hissəsi -->
+    <header>
         <div class="container">
             <div class="logo">
                 <h1>Home<span>Nova</span></h1>
             </div>
-            <div class="language-selector">
-                <button class="active" data-lang="az">AZ</button>
-                <button data-lang="en">EN</button>
-                <button data-lang="ru">RU</button>
-                <button data-lang="tr">TR</button>
-            </div>
-            <nav id="navbar">
-                <ul>
-                    <li><a href="#home" class="nav-link" data-key="home">Ana Səhifə</a></li>
-                    <li><a href="#about" class="nav-link" data-key="about">Haqqımızda</a></li>
-                    <li><a href="#services" class="nav-link" data-key="services">Xidmətlər</a></li>
-                    <li><a href="#products" class="nav-link" data-key="products">Məhsullar</a></li>
-                    <li><a href="#contact" class="nav-link" data-key="contact">Əlaqə</a></li>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="active">Ana Səhifə</a></li>
+                    <li><a href="#xidmetler">Xidmətlər</a></li>
+                    <li><a href="#mehsullar">Məhsullar</a></li>
+                    <li><a href="#haqqimizda">Haqqımızda</a></li>
+                    <li><a href="#elaqe">Əlaqə</a></li>
                 </ul>
                 <div class="hamburger">
                     <span class="bar"></span>
@@ -38,220 +31,199 @@
         </div>
     </header>
 
-    <!-- Ana Səhifə Bölməsi -->
-    <section id="home">
+    <!-- Ana hissə -->
+    <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1><span data-key="hero-title-1">Eviniz üçün peşəkar</span> <span class="highlight" data-key="hero-title-2">təmir</span> <span data-key="hero-title-3">və</span> <span class="highlight" data-key="hero-title-4">təmizlik</span> <span data-key="hero-title-5">xidmətləri</span></h1>
-                <p data-key="hero-subtitle">HomeNova ilə evinizi yeniləyin, təmiz və rahat yaşayış tərzini qoruyun.</p>
-                <div class="cta-buttons">
-                    <a href="#services" class="btn btn-primary" data-key="our-services">Xidmətlərimiz</a>
-                    <a href="#contact" class="btn btn-secondary" data-key="contact-us">Bizimlə Əlaqə</a>
-                </div>
+                <h1>Eviniz üçün peşəkar təmir və təmizlik xidmətləri</h1>
+                <p>Home Nova ilə eviniz təzə və təmiz qalacaq. Bizimlə əlaqə saxlayın və keyfiyyətli xidmət əldə edin.</p>
+                <a href="#elaqe" class="btn">Əlaqə saxlayın</a>
             </div>
         </div>
     </section>
 
-    <!-- Haqqımızda Bölməsi -->
-    <section id="about">
+    <!-- Xidmətlər bölməsi -->
+    <section id="xidmetler" class="services">
         <div class="container">
-            <div class="section-title">
-                <h2 data-key="about">Haqqımızda</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3 data-key="who-we-are">Biz Kimik?</h3>
-                    <p data-key="about-description">HomeNova olaraq 10 ildən artıq təcrübəmizlə təmir və təmizlik sahəsində peşəkar xidmətlər təqdim edirik. Müştərilərimizin tələblərinə uyğun yüksək keyfiyyətli iş görmək bizim prioritetimizdir.</p>
-                    
-                    <h3 data-key="why-choose-us">Niyə Bizi Seçməlisiniz?</h3>
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> <span data-key="professional-team">Peşəkar komanda</span></li>
-                        <li><i class="fas fa-check-circle"></i> <span data-key="quality-materials">Keyfiyyətli materiallar</span></li>
-                        <li><i class="fas fa-check-circle"></i> <span data-key="affordable-prices">Sərfəli qiymətlər</span></li>
-                        <li><i class="fas fa-check-circle"></i> <span data-key="guaranteed-service">Zəmanətli xidmət</span></li>
-                        <li><i class="fas fa-check-circle"></i> <span data-key="customer-satisfaction">Müştəri məmnuniyyəti</span></li>
-                    </ul>
-                </div>
-                <div class="about-image">
-                    <img src="/api/placeholder/500/300" alt="HomeNova komandası" />
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Xidmətlər Bölməsi -->
-    <section id="services">
-        <div class="container">
-            <div class="section-title">
-                <h2 data-key="services">Xidmətlərimiz</h2>
-                <div class="underline"></div>
-            </div>
+            <h2 class="section-title">Xidmətlərimiz</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-paint-roller"></i>
                     </div>
-                    <h3 data-key="renovation">Təmir işləri</h3>
-                    <p data-key="renovation-desc">Mənzil və ofis sahələrinin peşəkar təmiri, dizayn və planlaşdırma xidmətləri.</p>
+                    <h3>Təmir işləri</h3>
+                    <p>Evinizdə yüksək keyfiyyətli təmir işləri aparırıq. Rəngləmə, divar kağızı, döşəmə və daha çox.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-broom"></i>
                     </div>
-                    <h3 data-key="cleaning">Təmizlik</h3>
-                    <p data-key="cleaning-desc">Ev, ofis və sənaye obyektlərinin cari və əsaslı təmizlik xidmətləri.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-couch"></i>
-                    </div>
-                    <h3 data-key="furniture">Mebel yığımı</h3>
-                    <p data-key="furniture-desc">İstənilən tip mebelin peşəkar yığılması və quraşdırılması.</p>
+                    <h3>Təmizlik xidmətləri</h3>
+                    <p>Peşəkar təmizlik komandamız evinizdə və ya ofisinizə parlaq təmizlik gətirəcək.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-tools"></i>
                     </div>
-                    <h3 data-key="plumbing">Santexnika</h3>
-                    <p data-key="plumbing-desc">Su və kanalizasiya sistemlərinin quraşdırılması və təmiri.</p>
+                    <h3>Santexnika</h3>
+                    <p>Hər cür santexnika problemlərinizi həll edirik. Keyfiyyətli və uzunömürlü xidmət.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Elektrik işləri</h3>
+                    <p>Evinizdə və ya ofisinizə elektrik işləri üçün peşəkar həllər təklif edirik.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Məhsullar Bölməsi -->
-    <section id="products">
+    <!-- Məhsullar bölməsi -->
+    <section id="mehsullar" class="products">
         <div class="container">
-            <div class="section-title">
-                <h2 data-key="products">Məhsullarımız</h2>
-                <div class="underline"></div>
-            </div>
+            <h2 class="section-title">Məhsullarımız</h2>
             <div class="products-grid">
                 <div class="product-card">
-                    <div class="product-image">
-                        <img src="/api/placeholder/300/200" alt="Təmizlik vasitələri" />
+                    <div class="product-img">
+                        <img src="/api/placeholder/300/200" alt="Təmizlik məhsulu">
                     </div>
-                    <h3 data-key="cleaning-products">Təmizlik vasitələri</h3>
-                    <p data-key="cleaning-products-desc">Yüksək keyfiyyətli ekoloji təmizlik məhsulları.</p>
-                    <div class="product-price" data-key="price-from">Qiymət: <span>15₼-dən</span></div>
-                    <button class="btn btn-primary" data-key="view-details">Ətraflı</button>
+                    <div class="product-info">
+                        <h3>Təmizləyici sprey</h3>
+                        <p>Hər növ səth üçün universal təmizləyici</p>
+                        <div class="product-price">12.99 AZN</div>
+                    </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-image">
-                        <img src="/api/placeholder/300/200" alt="Rəng materialları" />
+                    <div class="product-img">
+                        <img src="/api/placeholder/300/200" alt="Boya">
                     </div>
-                    <h3 data-key="paint-materials">Rəng materialları</h3>
-                    <p data-key="paint-materials-desc">Müxtəlif rəng və kafel üçün keyfiyyətli materiallar.</p>
-                    <div class="product-price" data-key="price-from">Qiymət: <span>25₼-dən</span></div>
-                    <button class="btn btn-primary" data-key="view-details">Ətraflı</button>
+                    <div class="product-info">
+                        <h3>Premium divar boyası</h3>
+                        <p>Yüksək keyfiyyətli, uzunömürlü divar boyası</p>
+                        <div class="product-price">45.99 AZN</div>
+                    </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-image">
-                        <img src="/api/placeholder/300/200" alt="Alətlər" />
+                    <div class="product-img">
+                        <img src="/api/placeholder/300/200" alt="Alət dəsti">
                     </div>
-                    <h3 data-key="tools">Alətlər</h3>
-                    <p data-key="tools-desc">Peşəkar tikinti və təmir alətləri.</p>
-                    <div class="product-price" data-key="price-from">Qiymət: <span>45₼-dən</span></div>
-                    <button class="btn btn-primary" data-key="view-details">Ətraflı</button>
+                    <div class="product-info">
+                        <h3>Alət dəsti</h3>
+                        <p>Ev təmiri üçün 25 parçalı peşəkar alət dəsti</p>
+                        <div class="product-price">129.99 AZN</div>
+                    </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-image">
-                        <img src="/api/placeholder/300/200" alt="Santexnika məhsulları" />
+                    <div class="product-img">
+                        <img src="/api/placeholder/300/200" alt="Təmizlik dəsti">
                     </div>
-                    <h3 data-key="plumbing-products">Santexnika məhsulları</h3>
-                    <p data-key="plumbing-products-desc">Yüksək keyfiyyətli santexnika avadanlıqları.</p>
-                    <div class="product-price" data-key="price-from">Qiymət: <span>30₼-dən</span></div>
-                    <button class="btn btn-primary" data-key="view-details">Ətraflı</button>
+                    <div class="product-info">
+                        <h3>Təmizlik dəsti</h3>
+                        <p>Tam ev təmizliyi üçün peşəkar dəst</p>
+                        <div class="product-price">79.99 AZN</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Əlaqə Bölməsi -->
-    <section id="contact">
+    <!-- Haqqımızda bölməsi -->
+    <section id="haqqimizda" class="about">
         <div class="container">
-            <div class="section-title">
-                <h2 data-key="contact">Əlaqə</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <h3 data-key="address">Ünvan</h3>
-                        <p>Bakı şəh., Nərimanov r., Əhməd Rəcəbli küç., 5</p>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <h3 data-key="phone">Telefon</h3>
-                        <p>+994 50 123 45 67</p>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <h3 data-key="email">E-poçt</h3>
-                        <p>info@homenova.az</p>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-clock"></i>
-                        <h3 data-key="working-hours">İş saatları</h3>
-                        <p data-key="working-hours-value">Bazar ertəsi - Şənbə: 09:00 - 18:00</p>
-                    </div>
+            <h2 class="section-title">Haqqımızda</h2>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="/api/placeholder/600/400" alt="Home Nova komandası">
                 </div>
+                <div class="about-text">
+                    <h3>Home Nova komandası</h3>
+                    <p>Home Nova 2015-ci ildən Azərbaycanda fəaliyyət göstərən, yüksək keyfiyyətli təmir və təmizlik xidmətləri təklif edən şirkətdir. Biz müştərilərimizə ən yaxşı xidməti təqdim etmək üçün təcrübəli və peşəkar komanda ilə çalışırıq.</p>
+                    <p>Məqsədimiz evinizi və ya iş yerinizi istədiyiniz kimi mükəmməl hala gətirməkdir. Xidmətlərimiz həm evlər, həm də ofislər üçün nəzərdə tutulub.</p>
+                    <p>Home Nova olaraq, biz həmişə müştərilərimizin tələblərinə uyğun, keyfiyyətli və sərfəli qiymətlərlə xidmət göstərməyi hədəfləyirik.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Əlaqə bölməsi -->
+    <section id="elaqe" class="contact">
+        <div class="container">
+            <h2 class="section-title">Əlaqə</h2>
+            <div class="contact-grid">
                 <div class="contact-form">
-                    <h3 data-key="send-message">Bizə mesaj göndərin</h3>
-                    <form>
+                    <form id="contactForm">
                         <div class="form-group">
-                            <input type="text" placeholder="Adınız və Soyadınız" data-key="name-placeholder" required>
+                            <label for="name">Ad Soyad</label>
+                            <input type="text" id="name" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="E-poçt ünvanınız" data-key="email-placeholder" required>
+                            <label for="email">E-poçt</label>
+                            <input type="email" id="email" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" placeholder="Telefon nömrəniz" data-key="phone-placeholder">
+                            <label for="phone">Telefon</label>
+                            <input type="tel" id="phone" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <textarea placeholder="Mesajınız" data-key="message-placeholder" rows="5" required></textarea>
+                            <label for="message">Mesajınız</label>
+                            <textarea id="message" class="form-control" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary" data-key="send">Göndər</button>
+                        <button type="submit" class="btn">Göndər</button>
                     </form>
                 </div>
+                <div class="contact-info">
+                    <h3>Əlaqə məlumatları</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <p>28 May küç. 114, Bakı, Azərbaycan</p>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <p>+994 12 345 67 89</p>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <p>info@homenova.az</p>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <p>B.e - C. 09:00 - 18:00</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer Bölməsi -->
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <h2>Home<span>Nova</span></h2>
-                    <p data-key="footer-description">Təmir və təmizlik xidmətlərində peşəkar həllər.</p>
+                    Home<span>Nova</span>
                 </div>
-                <div class="footer-links">
-                    <h3 data-key="quick-links">Sürətli keçidlər</h3>
-                    <ul>
-                        <li><a href="#home" data-key="home">Ana Səhifə</a></li>
-                        <li><a href="#about" data-key="about">Haqqımızda</a></li>
-                        <li><a href="#services" data-key="services">Xidmətlər</a></li>
-                        <li><a href="#products" data-key="products">Məhsullar</a></li>
-                        <li><a href="#contact" data-key="contact">Əlaqə</a></li>
-                    </ul>
+                <p>Eviniz üçün peşəkar təmir və təmizlik xidmətləri</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
-                <div class="footer-social">
-                    <h3 data-key="follow-us">Bizi izləyin</h3>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+                <div class="copyright">
+                    &copy; 2025 Home Nova. Bütün hüquqlar qorunur.
                 </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 HomeNova. <span data-key="rights-reserved">Bütün hüquqlar qorunur.</span></p>
             </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
