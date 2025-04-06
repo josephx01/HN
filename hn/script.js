@@ -1,4 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hamburger.addEventListener('click', function() {
+        // Hamburger ikonasını dəyişdirmək
+        this.classList.toggle('active');
+        
+        // Menyunun görünürlüyünü dəyişdirmək
+        navMenu.classList.toggle('active');
+    });
+    
     const translations = {
         az: {
             "home": "Ana Səhifə",
