@@ -577,8 +577,8 @@ footer {
         
         #navbar ul.active {
             left: 0;
-        }
-        .nav-links {
+    }
+    .nav-links {
       display: none;
       flex-direction: column;
       background-color: #fff;
@@ -590,7 +590,7 @@ footer {
       z-index: 1000;
     }
     
-    .nav-links.active {
+     .nav-links.active {
       display: flex;
     }
     
